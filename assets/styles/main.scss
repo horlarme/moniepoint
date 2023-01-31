@@ -1,9 +1,24 @@
 @tailwind base;
-@tailwind component;
+@tailwind components;
 @tailwind utitly;
 
 @layer base {
   body {
     @apply font-poppins;
+  }
+}
+
+@layer components {
+  .heading {
+    @apply text-base font-semibold;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+      @apply hidden;
+    }
   }
 }
