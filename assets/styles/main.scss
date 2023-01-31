@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind component;
+@tailwind utitly;
+
+@layer base {
+  body {
+    @apply font-poppins;
+  }
+}
