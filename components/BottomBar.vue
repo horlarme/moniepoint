@@ -20,7 +20,6 @@ const modalRef = ref<null | HTMLDivElement>(null)
 const modalContentRef = ref<null | HTMLDivElement>(null)
 
 function toggleModal() {
-    console.log('toggleModal')
     modalRef.value!.classList.toggle('modal-open')
 }
 
@@ -38,7 +37,7 @@ onClickOutside(modalContentRef, closeModal)
 </script>
 
 <template>
-    <div ref="modalRef" class="modal items-end">
+    <div ref="modalRef" class="modal items-end max-w-[400px] mx-auto">
         <div ref="modalContentRef" class="modal-box mb-32 rounded-3xl flex flex-col gap-y-4">
             <div v-for="(link, index) in modalNavLinks"
                  class="group font-semibold flex items-center p-4 rounded-2xl shadow-lg gap-x-3 text-lg w-full bg-white hover:scale-90 transition-all hover:bg-primary"
@@ -50,7 +49,7 @@ onClickOutside(modalContentRef, closeModal)
             </div>
         </div>
     </div>
-    <div class="fixed bottom-0 bg-white rounded-t-2xl flex items-center justify-around inset-x-0">
+    <div class="fixed bottom-0 bg-white rounded-t-2xl flex max-w-[400px] items-center justify-around inset-x-0 mx-auto">
         <i class="text-xl text-black/60 grid place-items-center w-14 aspect-square align-center px-3"
            :class="{'bg-primary -translate-y-8 rounded-full text-3xl text-white': index===2}"
            v-for="(link, index) in links"

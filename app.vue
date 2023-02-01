@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto overflow-x-hidden min-h-screen relative flex-1">
+    <div class="mx-auto overflow-x-hidden min-h-screen relative flex-1 max-w-[400px]">
         <TopBar/>
         <div class="carousel w-full gap-4 my-5 px-4">
             <Activity v-for="i in 3" :key="i"/>
